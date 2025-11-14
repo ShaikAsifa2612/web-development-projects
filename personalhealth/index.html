@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Health Assistant</h1>
+        <button id="themeToggle">Switch Theme</button>
+    </header>
+    <section id="dashboard">
+        <div class="card" id="medicine-section">
+            <h2>Medicine Remainder</h2>
+            <button>Add Medicine</button>
+        </div>
+        <div class="card" id="water-section">
+            <h2>Water Intake Tracker</h2>
+            <button>Start Water Remainder</button>
+        </div>
+        <div class="card" id="sleep-section">
+            <h2>Sleep/Wellness Remainder</h2>
+            <button>Set Sleep Time</button>
+        </div>
+    </section>
+    <div id="popupform" style="display:none;">
+        <div id="popupcard">
+            <h2>Add Medicine Remainder</h2>
+            <input type="text" id="medName" placeholder="Medicine Name">
+            <input type="time" id="medTime">
+            <textarea name="notes" id="medNotes" placeholder="Notes (Before/After Food)"></textarea>
+            <br><br>
+            <button id="saveMed">Save Remainder</button>
+            <button id="closePopup">Cancel</button>
+        </div>
+    </div>
+    <!-- Water Reminder Popup -->
+    <!-- Water Reminder Popup -->
+    <div id="waterpopup" style="display:none;">
+        <div id="popupcard">
+            <h2>Water Intake Reminder</h2>
+            <input type="number" id="waterInterval" placeholder="Interval in minutes (e.g., 60)">
+            <br><br>
+            <button id="saveWater">Save Reminder</button>
+            <button id="closeWaterPopup">Cancel</button>
+        </div>
+    </div>
+<!-- Sleep Reminder Popup -->
+    <div id="sleepPopup" style="display: none;">
+        <div id="popupcard">
+            <h2>Set Sleep Reminder</h2>
+            <input type="time" id="sleepTime" placeholder="Sleep Time">
+            <input type="time" id="wakeTime" placeholder="Wake-up Time" style="margin-top: 10px;">
+            <br><br>
+            <button id="saveSleep">Save Reminder</button>
+            <button id="closeSleepPopup">Cancel</button>
+        </div>
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
